@@ -12,15 +12,37 @@
 
 # pulseaudio volume UP (+5)
 XF86AudioRaiseVolume
-	pamixer --change-volume +5
+	pamixer -i 5
 
 # pulseaudio volume DOWN (-5)
 XF86AudioLowerVolume
-	pamixer --change-volume -5
+	pamixer -d 5
 
-# pulseaudio volume MUTE (0)
+# pulseaudio volume MUTE
 XF86AudioMute
-	pamixer --toggle-mute
+	pamixer -m
+
+# pause/play
+XF86AudioPlay
+	playerctl play-pause
+
+# previous
+XF86AudioPrev
+	playerctl previous
+
+# next
+XF86AudioNext
+	playerctl next
+
+##------- BRIGHTNESS -------##
+
+# increase brightness
+XF86MonBrightnessUp
+	brightnessctl s +5%
+
+# decrease brightness
+XF86MonBrightnessDown
+	brightnessctl s 5%-
 
 ##------- TERMINAL -------##
 
