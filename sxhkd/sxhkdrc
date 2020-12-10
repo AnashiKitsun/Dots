@@ -1,0 +1,223 @@
+#============================================
+#                                            
+#  ######   #####    #####   ##       ####  
+#    ##    ##   ##  ##   ##  ##      ##     
+#    ##    ##   ##  ##   ##  ##       ###   
+#    ##    ##   ##  ##   ##  ##         ##  
+#    ##     #####    #####   ######  ####   
+#                                            
+#============================================
+
+##------- AUDIO -------##
+
+# pulseaudio volume UP (+5)
+XF86AudioRaiseVolume
+	pamixer -i 5
+
+# pulseaudio volume DOWN (-5)
+XF86AudioLowerVolume
+	pamixer -d 5
+
+# pulseaudio volume MUTE
+XF86AudioMute
+	pamixer -m
+
+# pause/play
+XF86AudioPlay
+	playerctl play-pause
+
+# previous
+XF86AudioPrev
+	playerctl previous
+
+# next
+XF86AudioNext
+	playerctl next
+
+##------- BRIGHTNESS -------##
+
+# increase brightness
+XF86MonBrightnessUp
+	brightnessctl s +5%
+
+# decrease brightness
+XF86MonBrightnessDown
+	brightnessctl s 5%-
+
+##------- TERMINAL -------##
+
+# kitty
+super + Return
+	kitty
+
+# kitty but for flexing
+super + shift + Return
+	kitty -e ~/.config/neofetch/launch.sh
+
+# ranger
+super + e
+	kitty -e ranger
+
+##------- SYSTEM -------##
+
+# sys shutdown
+super + ctrl + shift + q
+	systemctl poweroff
+
+# sys restart
+super + ctrl + shift + r
+	reboot
+
+# update
+super + ctrl + u
+	bspc rule -a \* -o state=floating && kitty -e $SHELL -c "figlet update... && sudo pacman -Syu"
+
+##------- ENVIRONMENT -------##
+
+# restart polybar
+super + shift + p
+	~/.config/polybar/launch.sh
+
+# bspwm quit
+super + ctrl + q
+	bspc quit
+
+# bspwm restart
+super + ctrl + r
+	bspc wm -r
+
+# reload sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+##------- NAVIGATION -------##
+
+# rofi run
+super + space
+	rofi -show run
+
+# rofi ssh
+super + shift + space
+	rofi -show ssh
+
+#===================================
+#                                   
+#    ###    #####   #####    ####  
+#   ## ##   ##  ##  ##  ##  ##     
+#  ##   ##  #####   #####    ###   
+#  #######  ##      ##         ##  
+#  ##   ##  ##      ##      ####   
+#                                   
+#===================================
+
+##------- WEB -------##
+
+# firefox
+super + alt + f
+	firefox
+
+# lightcord
+super + alt + l
+	lightcord
+
+##------- DEV -------##
+
+# vscode
+super + alt + c
+	code
+
+##------- SETTINGS -------##
+
+# wallpaper
+super + alt + w
+    bspc rule -a \* -o state=floating && nitrogen
+
+#===========================
+#                           
+#  ##      ##  ###    ###  
+#  ##      ##  ## #  # ##  
+#  ##  ##  ##  ##  ##  ##  
+#  ##  ##  ##  ##      ##  
+#   ###  ###   ##      ##  
+#                           
+#===========================
+
+##------- NODE -------##
+
+# kill node
+super + w
+	bspc node -c
+
+# select node in direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus node relatively
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# loop between nodes in desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
+
+# focus the last node
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# expand window
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# shrink window
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+##------- LAYOUT -------##
+
+# switch between tiled and monocle
+super + m
+	bspc desktop -l next
+
+# send the selected node to newest preselection
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap node in direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# switch/send to desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# move floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+##------- PROPERTIES -------##
+
+# set node state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+##------- PRESELECTION -------##
+
+# preselect direction (arrow keys)
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# preselect direction (keyboard style)
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel preselection
+super + ctrl + space
+	bspc node -p cancel
