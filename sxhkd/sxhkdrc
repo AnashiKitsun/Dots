@@ -126,6 +126,10 @@ super + alt + l
 super + alt + c
 	code
 
+# notion-app
+super + alt + n
+	notion-app
+
 ##------- SETTINGS -------##
 
 # wallpaper
