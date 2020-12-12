@@ -26,6 +26,9 @@ XF86AudioMute
 XF86AudioPlay
 	playerctl play-pause
 
+XF86AudioPause
+        playerctl play-pause
+
 # previous
 XF86AudioPrev
 	playerctl previous
