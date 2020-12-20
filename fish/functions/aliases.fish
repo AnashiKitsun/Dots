@@ -1,0 +1,17 @@
+function aliases
+alias r="ranger"
+alias v="vim"
+alias v.c="vim ~/.vimrc"
+alias glone="git clone"
+alias dots="ranger ~/dots/"
+alias conf="ranger ~/.config/"
+alias pb="ranger ~/.config/polybar"
+alias pb.c="vim ~/.config/polybar/config"
+alias prompt="ranger ~/.config/omf/themes/heartsteal/"
+alias wm.c="vim ~/.config/bspwm/bspwmrc"
+alias kb.c="vim ~/.config/sxhkd/sxhkdrc"
+alias net="nmcli && nmtui"
+alias f="ranger ~/.config/fish/"
+alias f.c="vim ~/.config/fish/config.fish"
+alias f.f="ranger ~/.config/fish/functions"
+end
