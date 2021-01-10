@@ -123,6 +123,10 @@ super + alt + f
 super + alt + l
 	lightcord
 
+# spotify
+super + alt + s
+	spotify
+
 ##------- DEV -------##
 
 # vscode
