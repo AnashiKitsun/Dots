@@ -99,9 +99,9 @@ super + Escape
 super + space
 	rofi -show run
 
-# rofi ssh
+# rofi drun
 super + shift + space
-	rofi -show ssh
+	rofi -show drun
 
 #===================================
 #                                   
