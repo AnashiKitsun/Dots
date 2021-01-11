@@ -1,40 +1,49 @@
 #============================================
-#                                            
-#  ######   #####    #####   ##       ####  
-#    ##    ##   ##  ##   ##  ##      ##     
-#    ##    ##   ##  ##   ##  ##       ###   
-#    ##    ##   ##  ##   ##  ##         ##  
-#    ##     #####    #####   ######  ####   
-#                                            
+#
+#  ######   #####    #####   ##       ####
+#    ##    ##   ##  ##   ##  ##      ##
+#    ##    ##   ##  ##   ##  ##       ###
+#    ##    ##   ##  ##   ##  ##         ##
+#    ##     #####    #####   ######  ####
+#
 #============================================
 
 ##------- AUDIO -------##
 
 # pulseaudio volume UP (+5)
-XF86AudioRaiseVolume
+super + alt + equal
 	pamixer -i 5
 
 # pulseaudio volume DOWN (-5)
-XF86AudioLowerVolume
+super + alt + minus
 	pamixer -d 5
 
 # pulseaudio volume MUTE
-XF86AudioMute
-	pamixer -m
+super + alt + 0
+	pamixer -t
 
 # pause/play
 XF86AudioPlay
 	playerctl play-pause
 
 XF86AudioPause
-        playerctl play-pause
+  playerctl play-pause
+
+super + alt + 8
+	playerctl play-pause
 
 # previous
 XF86AudioPrev
 	playerctl previous
 
+super + alt + 7
+	playerctl previous
+
 # next
 XF86AudioNext
+	playerctl next
+
+super + alt + 9
 	playerctl next
 
 ##------- BRIGHTNESS -------##
@@ -43,8 +52,14 @@ XF86AudioNext
 XF86MonBrightnessUp
 	brightnessctl s +5%
 
+super + alt + 2
+	brightnessctl s +5%
+
 # decrease brightness
 XF86MonBrightnessDown
+	brightnessctl s 5%-
+
+super + alt + 1
 	brightnessctl s 5%-
 
 ##------- TERMINAL -------##
@@ -103,14 +118,24 @@ super + space
 super + shift + space
 	rofi -show drun
 
+super + alt + 4
+	rofi -show drun
+
+# rofi windows
+super + shift + alt + space
+	rofi -show window
+
+super + alt + 3
+	rofi -show window
+
 #===================================
-#                                   
-#    ###    #####   #####    ####  
-#   ## ##   ##  ##  ##  ##  ##     
-#  ##   ##  #####   #####    ###   
-#  #######  ##      ##         ##  
-#  ##   ##  ##      ##      ####   
-#                                   
+#
+#    ###    #####   #####    ####
+#   ## ##   ##  ##  ##  ##  ##
+#  ##   ##  #####   #####    ###
+#  #######  ##      ##         ##
+#  ##   ##  ##      ##      ####
+#
 #===================================
 
 ##------- WEB -------##
@@ -129,9 +154,9 @@ super + alt + s
 
 ##------- DEV -------##
 
-# vscode
+# atom
 super + alt + c
-	code
+	atom
 
 # notion-app
 super + alt + n
@@ -144,13 +169,13 @@ super + alt + w
     bspc rule -a \* -o state=floating && nitrogen
 
 #===========================
-#                           
-#  ##      ##  ###    ###  
-#  ##      ##  ## #  # ##  
-#  ##  ##  ##  ##  ##  ##  
-#  ##  ##  ##  ##      ##  
-#   ###  ###   ##      ##  
-#                           
+#
+#  ##      ##  ###    ###
+#  ##      ##  ## #  # ##
+#  ##  ##  ##  ##  ##  ##
+#  ##  ##  ##  ##      ##
+#   ###  ###   ##      ##
+#
 #===========================
 
 ##------- NODE -------##
