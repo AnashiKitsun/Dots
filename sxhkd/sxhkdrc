@@ -11,14 +11,23 @@
 ##------- AUDIO -------##
 
 # pulseaudio volume UP (+5)
+XF86AudioRaiseVolume
+	pamixer -i 5
+
 super + alt + equal
 	pamixer -i 5
 
 # pulseaudio volume DOWN (-5)
+XF86AudioLowerVolume
+	pamixer -d 5
+
 super + alt + minus
 	pamixer -d 5
 
 # pulseaudio volume MUTE
+XF86AudioMute
+	pamixer -t
+
 super + alt + 0
 	pamixer -t
 
