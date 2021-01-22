@@ -36,7 +36,7 @@ color12 = ${xrdb:color12}
 color13 = ${xrdb:color13}
 color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
-accent = ${colors.color9}
+accent = ${colors.color1}
 secondary = ${colors.color6}
 
 ;  _                    
