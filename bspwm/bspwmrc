@@ -26,6 +26,9 @@ nitrogen --restore
 # Start polybar
 ${HOME}/.config/polybar/launch.sh&
 
+# Start picom
+picom
+
 # Start dunst
 killall dunst
 sleep 0.5
