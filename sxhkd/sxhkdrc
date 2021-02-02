@@ -79,7 +79,7 @@ super + Return
 
 # kitty but for flexing
 super + shift + Return
-	kitty -e ~/.config/neofetch/launch.sh
+	kitty sh -c "neofetch; zsh"
 
 # ranger
 super + e
@@ -201,7 +201,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# loop between nodes in desktop
+ loop between nodes in desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local
 

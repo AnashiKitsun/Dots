@@ -8,7 +8,7 @@ export ZSH="/home/anashi/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="omz-themes/heartsteal"
+ZSH_THEME="omz-themes/mementomori"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,3 +112,5 @@ alias net="nmcli && nmtui"
 alias omz="ranger ~/.oh-my-zsh/"
 alias z.c="vim ~/.zshrc"
 alias omz.c="ranger ~/.oh-my-zsh/custom/"
+alias cva="cava -p /dev/null"
+alias :q="exit"
