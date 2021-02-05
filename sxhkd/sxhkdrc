@@ -131,10 +131,7 @@ super + alt + 4
 	rofi -show drun
 
 # rofi windows
-super + shift + alt + space
-	rofi -show window
-
-super + alt + 3
+super + Tab
 	rofi -show window
 
 #===================================
