@@ -1,0 +1,18 @@
+{
+	"base": {
+		"wallpapers": "${ROOT}/wallpapers/|~/Pictures/|False|ln -s|dir",
+		"system": {
+			"bspwm_config": "${ROOT}/bspwm/bspwmrc|~/.config/bspwm|True|ln -s|file",
+			"sxhkd_config": "${ROOT}/sxhkd/sxhkdrc|~/.config/sxhkd|False|ln -s|file",
+			"zsh_config": "${ROOT}/zsh/.zshrc|~|False|ln -s|file"
+		},
+		"ricing": {
+			"kitty_config": "${ROOT}/kitty/kitty.conf|~/.config/kitty|False|ln -s|file",
+			"polybar": {
+				"config": "${ROOT}/polybar/config|~/.config/polybar|False|ln -s|file",
+				"launch": "${ROOT}/polybar/launch.sh|~/.config/polybar|True|ln -s|file"
+			},
+			"xresources": "${ROOT}/xrdb/.Xresources|~|False|ln -s|file"
+		}
+	}
+}
