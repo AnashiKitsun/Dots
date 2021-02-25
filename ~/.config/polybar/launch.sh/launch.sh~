@@ -1,1 +1,0 @@
-/home/lubuntu/Dots/polybar/launch.sh
