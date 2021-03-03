@@ -89,7 +89,7 @@ super + e
 
 # sys shutdown
 super + ctrl + shift + q
-	systemctl poweroff
+	poweroff
 
 # sys restart
 super + ctrl + shift + r
@@ -150,9 +150,9 @@ super + Tab
 super + alt + f
 	firefox
 
-# lightcord
-super + alt + l
-	lightcord
+# discord
+super + alt + d
+	discord
 
 # spotify
 super + alt + s
@@ -164,9 +164,9 @@ super + alt + s
 super + alt + c
 	atom
 
-# notion-app
+# test notification
 super + alt + n
-	notion-app
+	notify-send "Notification Test"
 
 ##------- SETTINGS -------##
 
