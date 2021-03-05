@@ -31,4 +31,5 @@ killall dunst
 sleep 0.5
 dunst&
 echo "Notification Daemon Launched!"
+fcitx&
 wmname LG3D
