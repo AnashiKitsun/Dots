@@ -33,3 +33,4 @@ dunst&
 echo "Notification Daemon Launched!"
 fcitx&
 wmname LG3D
+/usr/lib/polkit-gnome/polkit-authentication-agent-1&

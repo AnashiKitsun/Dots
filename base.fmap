@@ -1,16 +1,16 @@
 {
-	"wallpapers": "./wallpapers/|~/Pictures/wallpapers/|0|ln_-b_-s",
+	"wallpapers": "./wallpapers/|~/Pictures/|0|ln_-b_-s",
 	"system": {
-		"bspwm_config": "./bspwm/bspwmrc|~/.config/bspwm/bspwmrc|1|ln_-b_-s",
-		"sxhkd_config": "./sxhkd/sxhkdrc|~/.config/sxhkd/sxhkdrc|0|ln_-b_-s",
-		"zsh_config": "./zsh/.zshrc|~/.zshrc|0|ln_-b_-s"
+		"bspwm_config": "./bspwm/bspwmrc|~/.config/bspwm/|1|ln_-b_-s",
+		"sxhkd_config": "./sxhkd/sxhkdrc|~/.config/sxhkd/|0|ln_-b_-s",
+		"zsh_config": "./zsh/.zshrc|~/|0|ln_-b_-s"
 	},
 	"ricing": {
-		"kitty_config": "./kitty/kitty.conf|~/.config/kitty/kitty.conf|0|ln_-b_-s",
+		"kitty_config": "./kitty/kitty.conf|~/.config/kitty/|0|ln_-b_-s",
 		"polybar": {
-			"config": "./polybar/config|~/.config/polybar/config|0|ln_-b_-s",
-			"launch": "./polybar/launch.sh|~/.config/polybar/launch.sh|1|ln_-b_-s"
+			"config": "./polybar/config|~/.config/polybar/|0|ln_-b_-s",
+			"launch": "./polybar/launch.sh|~/.config/polybar/|1|ln_-b_-s"
 		},
-		"xresources": "./xrdb/.Xresources|~/.Xresources|0|ln_-b_-s"
+		"xresources": "./xrdb/.Xresources|~/|0|ln_-b_-s"
 	}
 }
